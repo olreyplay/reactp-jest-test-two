@@ -15,3 +15,19 @@ test("App renders correctly", () => {
   expect(decrementButton).toBeInTheDocument();
   expect(resultElement).toHaveTextContent("Result: 0");
 });
+
+test("Increment button increments counter", () => {
+  render(<App />);
+
+  const incrementButton = screen.getByRole("button", { name: /increment/i });
+  const resultElement = screen.getByText(/result:/i);
+
+  fireEvent.click(incrementButton);
+  expect(resultElement).toHaveTextContent("Result: 1");
+
+  fireEvent.click(incrementButton);
+  expect(resultElement).toHaveTextContent("Result: 2");
+
+  fireEvent.click(incrementButton);
+  expect(resultElement).toHaveTextContent("Result: 3");
+});
