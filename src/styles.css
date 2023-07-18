@@ -1,0 +1,36 @@
+div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #45a049;
+}
+div:nth-child(2) {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+div:nth-child(2) span {
+  color: #4caf50;
+}
+button:last-child {
+  background-color: #f44336;
+}
+button:last-child:hover {
+  background-color: #d32f2f;
+}
